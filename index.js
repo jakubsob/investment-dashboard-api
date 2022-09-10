@@ -3,7 +3,7 @@ const { PrismaClient } = require('@prisma/client');
 
 const app = express();
 const prisma = new PrismaClient();
-const PORT = 3001;
+const port = process.env.PORT || 3000
 
 app.use(express.json());
 app.get('/', (req, res) => {
@@ -33,6 +33,6 @@ app.post(`/post`, async (req, res) => {
   res.json(result)
 });
 
-const server = app.listen(PORT, () =>
-  console.log(`Server ready on port ${PORT}`),
+app.listen(port, () =>
+  console.log(`Server ready on port ${port}`),
 )
