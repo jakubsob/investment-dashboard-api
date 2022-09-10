@@ -1,0 +1,30 @@
+{
+  "name": "investment-dashboard-api",
+  "version": "1.0.0",
+  "description": "Investment dashboard API with Express.js and Prisma",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakubsob/investment-dashboard-api.git"
+  },
+  "keywords": [
+    "express",
+    "prisma",
+    "netlify",
+    "planetscale"
+  ],
+  "author": "jakupsob",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jakubsob/investment-dashboard-api/issues"
+  },
+  "homepage": "https://github.com/jakubsob/investment-dashboard-api#readme",
+  "dependencies": {
+    "@prisma/client": "^4.3.1",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
+  }
+}

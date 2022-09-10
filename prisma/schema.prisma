@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Transaction {
+  id        Int      @id @default(autoincrement()) @db.UnsignedInt
+  date      DateTime @db.DateTime(0)
+  amount    Float
+  price     Float?
+  currency  String   @db.VarChar(3)
+  name      String   @db.VarChar(255)
+  category  String   @db.VarChar(255)
+  portfolio String   @db.VarChar(255)
+}
