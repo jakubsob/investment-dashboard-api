@@ -1,11 +1,14 @@
 const express = require('express');
 const { PrismaClient } = require('@prisma/client');
+const cors = require('cors');
 
 const app = express();
 const prisma = new PrismaClient();
 const port = process.env.PORT || 3000
 
 app.use(express.json());
+app.use(cors());
+
 app.get('/', (req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/html' });
   res.write('<h1>Investment dashboard api!</h1>');
